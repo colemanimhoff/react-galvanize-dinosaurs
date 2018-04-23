@@ -2,7 +2,6 @@ import React from 'react'
 import './App.css'
 import Header from './components/Header'
 import Profiles from './components/Profiles'
-import SkillList from './components/SkillsList'
 import Footer from './components/Footer'
 
 class App extends React.Component {

@@ -1,0 +1,13 @@
+[{
+    "name": "T-Rex",
+    "image": "./dino-1.png",
+    "skills": ["stepping on things", "musing on life", "MS Office"]
+}, {
+    "name": "Utahraptor",
+    "image": "./dino3.png",
+    "skills": ["being contrary"]
+}, {
+    "name": "Dromiceiomimus",
+    "image": "./dino-2.png",
+    "skills": ["Java", "Ninja", "MongoDB", "Git and Github", "Agile"]
+}]

@@ -1,26 +1,38 @@
 import React from 'react'
+import Preview from './Preview'
 
 class InputForm extends React.Component {
+    state = {
+        message: '',
+        showResponse: false
+    }
 
-showPreview () {
-    document.querySelector("#application-preview").textContent = document.querySelector("textarea").value
-}
+    handleChange = (event) => {
+        this.setState({
+            message: event.target.value,
+        })
+    }
 
-handleSubmit (event) {
-    event.preventDefault()
-    event.target.reset()
-    document.querySelector("#application-preview").textContent = ""
-    document.getElementById("message").textContent = "Your application was submitted!"
-
-}
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.setState({
+            message: '',
+            showResponse: true
+        })
+    }
 
     render () {
+        const showResponse = this.state.showResponse
         return (
-            <form id="application-input" onSubmit={this.handleSubmit}>
-                <label>Apply Here: </label>
-                <textarea id="application-text" rows="8" cols="100" onKeyUp={this.showPreview}></textarea>
-                <input id="submit" type="submit" value="Submit" />
-            </form>
+            <div>
+                <form id="application-input" onSubmit={this.handleSubmit}>
+                    <label>Apply Here: </label>
+                    <textarea id="application-text" rows="8" cols="100" onChange={this.handleChange}></textarea>
+                    <input id="submit" type="submit" value="Submit" />
+                </form>
+                {showResponse && <p id="message">Your application was submitted!</p>}
+                <Preview message={this.state.message}/>
+            </div>
         )
     }
 }

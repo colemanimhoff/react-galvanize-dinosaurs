@@ -2,14 +2,20 @@ import React from 'react'
 import SkillList from './SkillList'
 
 class Profiles extends React.Component {
+    state = {
+        showSkills: false
+    }
 
     toggleSkills = (event) => {
-        if (event.target.parentNode.classList.contains("profile-header")) {
-            event.target.parentNode.parentNode.childNodes[1].classList.toggle("hidden")
-        }
+        console.log(event.target)
+        const skills = !this.state.showSkills
+        this.setState({
+            showSkills: skills
+        })
     }
 
     render() {
+        const showSkills = this.state.showSkills
         return (
             <main>
                 <section id="profiles-container">
@@ -23,7 +29,7 @@ class Profiles extends React.Component {
                                     <img src={dinosaur.image} alt={dinosaur.name}/>
                                      <h2>{dinosaur.name}</h2>
                                 </header>
-                                <SkillList skills={dinosaur.skills} />
+                                {showSkills && <SkillList skills={dinosaur.skills} />}
                             </div>
                         </li>
                         )

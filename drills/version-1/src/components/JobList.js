@@ -1,6 +1,7 @@
 import React from 'react'
 
 class JobList extends React.Component {
+    
     render () {
         return (
             <section>

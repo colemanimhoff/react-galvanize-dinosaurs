@@ -1,7 +1,6 @@
 import React from 'react'
 
 class JobDetails extends React.Component {
-    
     render () {
         return (
             <section id="job-details">

@@ -3,7 +3,7 @@ import React from 'react'
 const Header = (props) => {
     return (
     <header>
-        <img src="./g-dino.png" alt="Dinosaur Logo" />
+        <img src="./g-dino.png" alt="Dinosaur Logo"/>
     </header>
        )
 } 

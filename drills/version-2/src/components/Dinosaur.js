@@ -20,8 +20,8 @@ class Dinosaur extends React.Component {
                         <header className="profile-header" onClick={this.toggleSkills}>
                             <img src={this.props.profile.image} alt={this.props.profile.name}/>
                             <h2>{this.props.profile.name}</h2>
-                            {showSkills && <SkillList skills={this.props.profile.skills}/>}
                         </header>
+                        {showSkills && <SkillList skills={this.props.profile.skills}/>}
                     </div>                   
                 </li>
         )

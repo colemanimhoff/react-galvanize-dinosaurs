@@ -9,8 +9,7 @@ class JobDetails extends React.Component {
                 <p>{this.props.listing.description}</p>
             </section>
         )
-    }
-   
+    }  
 }
 
 export default JobDetails
